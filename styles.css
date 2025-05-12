@@ -1,18 +1,18 @@
 .resume-header {
-  position: relative;
-  background-image: url('header.jpg');
+  background-image: url('header.webp');
   background-size: cover;
   background-position: center;
   color: white;
   padding: 60px 40px;
   text-align: center;
+  position: relative;
 }
 
 .resume-header::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  background: rgba(0, 0, 0, 0.4); /* optional dark overlay for text readability */
   z-index: 1;
 }
 
