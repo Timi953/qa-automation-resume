@@ -6,26 +6,60 @@
   padding: 60px 40px;
   text-align: center;
   position: relative;
+  overflow: hidden; /* Ensures no overflow of overlay */
 }
 
 .resume-header::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.411); /* 30% opacity white fade */
   z-index: 1;
 }
 
 .resume-header > * {
   position: relative;
-  z-index: 2;
+  z-index: 2; /* Ensures content stays on top of the overlay */
 }
 
-.resume-header a {
+body {
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: #2125294a;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+/* Customize badge styles */
+.badge.bg-primary {
+  background-color: #000000; /* Change to a softer shade */
+  color: white; /* Ensure text is white */
+}
+
+.badge.bg-primary.skill-badge {
+  background-color: #000000; /* Lighter blue or any other color you prefer */
   color: white;
-  text-decoration: underline;
+  border-radius: 20px; /* Optional: to make badges rounded */
+  padding: 5px 12px; /* Optional: add padding for better readability */
 }
 
-.resume-header a:hover {
-  color: #dfe6f1;
+.badge.bg-primary.skill-badge:hover {
+  background-color: #000000; /* Darker shade on hover */
+}
+
+/* Optional: If you want to use a completely different color */
+.badge.bg-custom {
+  background-color: #f8c102; /* Custom color (e.g., yellow) */
+  color: #000; /* Black text for contrast */
+}
+
+.badge.bg-custom:hover {
+  background-color: #d6a400; /* Hover effect */
 }
