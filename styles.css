@@ -1,0 +1,22 @@
+.resume-header {
+  position: relative;
+  background-image: url('header.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.resume-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: 1;
+}
+
+.resume-header > * {
+  position: relative;
+  z-index: 2;
+}
